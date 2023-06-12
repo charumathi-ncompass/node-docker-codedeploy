@@ -8,8 +8,8 @@
             "image": "368355641188.dkr.ecr.us-east-1.amazonaws.com/node-app:tag_value", 
             "portMappings": [
                 {
-                    "containerPort": 8000, 
-                    "hostPort": 8000, 
+                    "containerPort": 3000, 
+                    "hostPort": 3000, 
                     "protocol": "tcp"
                 }
             ], 
