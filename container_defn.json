@@ -1,6 +1,6 @@
 {
     "family": "node-task-ec2", 
-    "networkMode": "Bridge", 
+    "networkMode": "bridge", 
     "executionRoleArn": "arn:aws:iam::368355641188:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
