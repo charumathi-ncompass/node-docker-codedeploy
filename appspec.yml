@@ -1,14 +1,23 @@
-version: 0.0
-os: linux
-files:
-  - source: ./
-    destination: /home/ec2-user
-hooks:
-  BeforeInstall:
-    - location: ./start.sh
-      timeout: 120
-      runas: root 
-  AfterInstall:
-    - location: ./stop.sh
-      timeout: 300
-      runas: root
+# version: 0.0
+# os: linux
+# files:
+#   - source: ./
+#     destination: /home/ec2-user
+# hooks:
+#   BeforeInstall:
+#     - location: ./start.sh
+#       timeout: 120
+#       runas: root 
+#   AfterInstall:
+#     - location: ./stop.sh
+#       timeout: 300
+#       runas: root
+
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:368355641188:task-definition/node-task-ec2:revision"
+        LoadBalancerInfo:
+          ContainerName: "node-container"
+          ContainerPort: 8000
