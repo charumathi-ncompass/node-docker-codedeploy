@@ -53,21 +53,7 @@ pipeline {
                 }
             }
         }
-        stage('Creating new service') {
-            steps {
-                script {
-                    sh '''
-                        aws ecs create-service \
-                        --cluster node-cluster \
-                        --service-name node-service-1 \
-                        --task-definition ${TASK_DEFN_FAMILY} \
-                        --desired-count 1 \
-                        --launch-type EC2 \
-                        --region us-east-1
-                    '''
-                }
-            }
-        }
+       
 
     }
 }
