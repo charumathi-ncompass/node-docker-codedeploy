@@ -20,4 +20,4 @@ Resources:
         TaskDefinition: "arn:aws:ecs:us-east-1:368355641188:task-definition/node-task-ec2:revision"
         LoadBalancerInfo:
           ContainerName: "node-container"
-          ContainerPort: 8000
+          ContainerPort: 3000
