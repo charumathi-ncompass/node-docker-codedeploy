@@ -21,3 +21,5 @@ Resources:
         LoadBalancerInfo:
           ContainerName: "node-container"
           ContainerPort: 3000
+        DeploymentController:
+          Type: "CodeDeployToECS"
